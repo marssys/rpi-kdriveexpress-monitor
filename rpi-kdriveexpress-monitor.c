@@ -28,11 +28,8 @@ static void event_callback(int32_t ap, uint32_t e, void* user_data);
 
 int main(int argc, char* argv[])
 {
-//	uint16_t address = 0x901;
-//	uint32_t index = 0;
-	uint32_t key = 0;
-//	uint8_t value = 127;
 	int32_t ap = 0;
+	uint32_t key = 0;
 
 	/*
 		Configure the logging level and console logger
