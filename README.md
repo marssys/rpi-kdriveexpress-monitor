@@ -1,6 +1,6 @@
 # rpi-kdriveexpress-monitor
 ## Prepare Raspberry Pi 2 (Raspbian Stretch Lite)
-- 'sudo nano /boot/config.txt'
+'sudo nano /boot/config.txt'
 - Remove **console=serial0,115200**
 - 'sudo reboot'
 - Check the group of the device 'ls -l /dev/ttyAMA0'
