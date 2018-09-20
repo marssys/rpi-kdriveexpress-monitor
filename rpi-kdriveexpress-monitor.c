@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <kdrive_express.h>
 
+#define ERROR_MESSAGE_LEN	(128)	/*!< kdriveExpress Error Messages */
+
 /*******************************
 ** Private Functions
 ********************************/
