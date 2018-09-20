@@ -14,7 +14,7 @@ crw-rw---- 1 root dialout 204, 64 Aug  4 11:33 /dev/ttyAMA0
 - `sudo cp lib/raspbian/libkdriveExpress.so  /usr/local/lib`
 - `gcc -Iinclude -Wl,-rpath,/usr/local/lib -o rpi-kdriveexpress-monitor rpi-kdriveexpress-monitor.c -lkdriveExpress -lpthread`
 - `./rpi-kdriveexpress-monitor`
-## Samples
+## C samples
 - kdrive_express_dpt.c
 - kdrive_express_ip.c
 - kdrive_express_ip_tunnel_enumerate.c
