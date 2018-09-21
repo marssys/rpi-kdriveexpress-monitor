@@ -1,6 +1,6 @@
 # rpi-kdriveexpress-monitor
 ## Hardware
-- <a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/" target="blank">Raspberry Pi 2 Model B</a>
+- <a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/" target="_blank">Raspberry Pi 2 Model B</a>
 - [Weinzierl KNX BAOS Module 838 kBerry](https://www.weinzierl.de/index.php/en/all-knx/knx-module-en/knx-baos-module-838-en)  
 ![hardware](https://github.com/marssys/rpi-kdriveexpress-monitor/raw/master/images/hardware.jpg)
 ## Prepare Raspberry Pi 2 (Raspbian Stretch Lite)
