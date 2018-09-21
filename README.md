@@ -1,4 +1,6 @@
 # rpi-kdriveexpress-monitor
+## Hardware
+![hardware](https://github.com/marssys/rpi-kdriveexpress-monitor/raw/master/images/hardware.jpg)
 ## Prepare Raspberry Pi 2 (Raspbian Stretch Lite)
 - `sudo nano /boot/config.txt`
 - Remove **console=serial0,115200**
