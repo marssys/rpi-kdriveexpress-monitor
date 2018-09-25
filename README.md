@@ -4,7 +4,7 @@
 - Weinzierl KNX BAOS Module 838 kBerry  
 ![hardware](https://github.com/marssys/rpi-kdriveexpress-monitor/raw/master/images/hardware.jpg)
 ## Prepare Raspberry Pi 2 (Raspbian Stretch Lite)
-- `sudo nano /boot/config.txt`
+- `sudo nano /boot/cmdline.txt`
 - Remove **console=serial0,115200**
 - `sudo reboot`
 - Check the group of the device `ls -l /dev/ttyAMA0`
