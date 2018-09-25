@@ -36,6 +36,7 @@ crw-rw---- 1 root dialout 204, 64 Aug  4 11:33 /dev/ttyAMA0
 - `sudo apt-get update`
 - `sudo apt-get upgrade`
 - Install git `sudo apt-get install git`
+- Install screen `sudo apt-get install screen`
 ## Screen
 - `sudo apt-get install screen`
 - View screens `screen -ls`
