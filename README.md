@@ -43,4 +43,5 @@ crw-rw---- 1 root dialout 204, 64 Aug  4 11:33 /dev/ttyAMA0
 - Create new screen `screen`
 - Detach from screen `Ctrl+A`, then `D`
 - Return to previous screen `screen -r`
+- `screen -x`
 - Exit from screen `exit`
