@@ -4,7 +4,7 @@
 - Weinzierl KNX BAOS Module 838 kBerry  
 ![hardware](https://github.com/marssys/rpi-kdriveexpress-monitor/raw/master/images/hardware.jpg)
 ## Prepare Raspberry Pi 2 (Raspbian Stretch Lite)
-- `sudo nano /boot/config.txt`
+- `sudo nano /boot/cmdline.txt`
 - Remove **console=serial0,115200**
 - `sudo reboot`
 - Check the group of the device `ls -l /dev/ttyAMA0`
@@ -36,10 +36,12 @@ crw-rw---- 1 root dialout 204, 64 Aug  4 11:33 /dev/ttyAMA0
 - `sudo apt-get update`
 - `sudo apt-get upgrade`
 - Install git `sudo apt-get install git`
+- Install screen `sudo apt-get install screen`
 ## Screen
 - `sudo apt-get install screen`
 - View screens `screen -ls`
 - Create new screen `screen`
 - Detach from screen `Ctrl+A`, then `D`
 - Return to previous screen `screen -r`
+- `screen -x`
 - Exit from screen `exit`
