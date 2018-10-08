@@ -78,6 +78,8 @@ int main(int argc, char* argv[])
 			Connect the Packet Trace logging mechanism
 			to see the Rx and Tx packets
 		*/
+		printf("test1");
+		printf("test2");
 		kdrive_ap_packet_trace_connect(ap);
 
 		/* now we simply go into bus monitor mode, and display received telegrams */
