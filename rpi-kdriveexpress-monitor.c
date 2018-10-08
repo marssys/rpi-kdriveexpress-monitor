@@ -34,8 +34,8 @@ int main(int argc, char* argv[])
 	/*
 		Configure the logging level and console logger
 	*/
-	kdrive_logger_set_level(KDRIVE_LOGGER_INFORMATION);
-	kdrive_logger_console();
+	// kdrive_logger_set_level(KDRIVE_LOGGER_INFORMATION);
+	// kdrive_logger_console();
 
     /*
 		We register an error callback as a convenience logger function to
