@@ -112,8 +112,7 @@ void on_telegram(const uint8_t* telegram, uint32_t telegram_len, void* user_data
 	uint16_t address = 0;
 	uint8_t message_code = 0;
 
-	printf("test1\n");
-	printf(telegram);
+	printf("telegram\n");
 
 	kdrive_ap_get_message_code(telegram, telegram_len, &message_code);
 
