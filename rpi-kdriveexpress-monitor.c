@@ -78,8 +78,6 @@ int main(int argc, char* argv[])
 			Connect the Packet Trace logging mechanism
 			to see the Rx and Tx packets
 		*/
-		printf("test1");
-		printf("test2");
 		kdrive_ap_packet_trace_connect(ap);
 
 		/* now we simply go into bus monitor mode, and display received telegrams */
@@ -113,6 +111,9 @@ void on_telegram(const uint8_t* telegram, uint32_t telegram_len, void* user_data
 	uint32_t data_len = KDRIVE_MAX_GROUP_VALUE_LEN;
 	uint16_t address = 0;
 	uint8_t message_code = 0;
+
+	printf("test1\n");
+	printf(telegram);
 
 	kdrive_ap_get_message_code(telegram, telegram_len, &message_code);
 
