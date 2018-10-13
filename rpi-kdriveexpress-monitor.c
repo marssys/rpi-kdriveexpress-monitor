@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <time.h>
 #include <sys/time.h>
 #include <string.h>
 #include <inttypes.h>
@@ -122,6 +123,7 @@ void on_telegram(const uint8_t* telegram, uint32_t telegram_len, void* user_data
     time_t nowtime;
     struct tm *nowtm;
     char tmbuf[64], buf[64];
+    const uint8_t *p, *p2;
 
     gettimeofday(&tv, NULL);
     nowtime = tv.tv_sec;
@@ -129,7 +131,11 @@ void on_telegram(const uint8_t* telegram, uint32_t telegram_len, void* user_data
     strftime(tmbuf, sizeof tmbuf, "%Y/%m/%d %H:%M:%S", nowtm);
     snprintf(buf, sizeof buf, "%s.%03ld", tmbuf, tv.tv_usec / 1000);
 
-    printf("time: %s, telegram_len: %"PRIu32", telegram: %s\n", buf, telegram_len, telegram);
+    printf("time: %s, telegram_len: %"PRIu32", telegram: ", buf, telegram_len);
+
+    for (p = telegram, p2 = p + telegram_len; p < p2; ++p)
+        printf("%02x ", *p);
+    putchar('\n');
 
 // End code from kwork/maxvs
 
