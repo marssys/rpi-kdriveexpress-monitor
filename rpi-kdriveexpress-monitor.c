@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <sysinfoapi.h>
 #include <kdrive_express.h>
 
 #define ERROR_MESSAGE_LEN	(128)	/*!< kdriveExpress Error Messages */
