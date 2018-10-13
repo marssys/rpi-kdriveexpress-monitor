@@ -1,7 +1,8 @@
 #include <stdio.h>
-// #include <sysinfoapi.h>
+#include <time.h>
 #include <string.h>
 #include <inttypes.h>
+
 #include <kdrive_express.h>
 
 #define ERROR_MESSAGE_LEN	(128)	/*!< kdriveExpress Error Messages */
@@ -115,13 +116,22 @@ void on_telegram(const uint8_t* telegram, uint32_t telegram_len, void* user_data
 	uint16_t address = 0;
 	uint8_t message_code = 0;
 
-//	SYSTEMTIME sm;
-//	GetLocalTime(&sm);
-//	printf("time: %04d/%02d/%02d %02d:%02d:%02d.%03d, telegram_len: %"PRIu32", telegram: %s\n", 
-//            sm.wYear, sm.wMonth, sm.wDay, sm.wHour, sm.wMinute, sm.wSecond, sm.wMilliseconds, 
-//            telegram_len, telegram);
+// Code from kwork/maxvs
 
-	printf("telegram_len: %"PRIu32", telegram: %s\n", telegram_len, telegram);
+	struct timeval tv;
+    time_t nowtime;
+    struct tm *nowtm;
+    char tmbuf[64], buf[64];
+
+    gettimeofday(&tv, NULL);
+    nowtime = tv.tv_sec;
+    nowtm = localtime(&nowtime);
+    strftime(tmbuf, sizeof tmbuf, "%Y/%m/%d %H:%M:%S", nowtm);
+    snprintf(buf, sizeof buf, "%s.%03ld", tmbuf, tv.tv_usec / 1000);
+
+    printf("time: %s, telegram_len: %"PRIu32", telegram: %s\n", buf, telegram_len, telegram);
+
+// End code from kwork/maxvs
 
 	kdrive_ap_get_message_code(telegram, telegram_len, &message_code);
 
