@@ -112,8 +112,11 @@ void on_telegram(const uint8_t* telegram, uint32_t telegram_len, void* user_data
 	uint16_t address = 0;
 	uint8_t message_code = 0;
 
-	printf("telegram\n");
-	printf(telegram_len);
+	SYSTEMTIME sm;
+	GetLocalTime(&sm);
+	printf("time: %04d/%02d/%02d %02d:%02d:%02d.%03d, telegram_len: %"PRIu32", telegram: %s\n", 
+            sm.wYear, sm.wMonth, sm.wDay, sm.wHour, sm.wMinute, sm.wSecond, sm.wMilliseconds, 
+            telegram_len, telegram);
 
 	kdrive_ap_get_message_code(telegram, telegram_len, &message_code);
 
