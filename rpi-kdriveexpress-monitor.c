@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <time.h>
 #include <sys/time.h>
-#include <string.h>
 #include <inttypes.h>
 
 #include <kdrive_express.h>
@@ -117,7 +116,7 @@ void on_telegram(const uint8_t* telegram, uint32_t telegram_len, void* user_data
 	uint16_t address = 0;
 	uint8_t message_code = 0;
 
-// Code from kwork/maxvs
+	// Code from kwork/maxvs
 
 	struct timeval tv;
     time_t nowtime;
@@ -137,7 +136,7 @@ void on_telegram(const uint8_t* telegram, uint32_t telegram_len, void* user_data
         printf("%02x ", *p);
     putchar('\n');
 
-// End code from kwork/maxvs
+	// End code from kwork/maxvs
 
 	kdrive_ap_get_message_code(telegram, telegram_len, &message_code);
 
