@@ -4,7 +4,12 @@
 - Weinzierl KNX BAOS Module 838 kBerry  
 ![hardware](https://github.com/marssys/rpi-kdriveexpress-monitor/raw/master/images/hardware.jpg)
 ## Prepare Raspberry Pi 3 Model B (Raspberry Pi OS Lite)
-- todo
+The default usage of the UART Interface is serial console. To use the UART we must turning off the UART functioning as a serial console.
+- `sudo nano /boot/cmdline.txt`
+- Remove **console=serial0,115200**
+The Raspberry Pi 3 does not use the correct baud rate in Raspian out of the box, so kBerry will not work. To fix this, the overlay pi3-miniuart-bt-overlay must be activated.
+- `sudo sh -c "echo dtoverlay=pi3-miniuart-bt >>/boot/config.txt"`
+- `sudo reboot`
 ## Prepare Raspberry Pi 2 Model B (Raspbian Stretch Lite)
 - `sudo nano /boot/cmdline.txt`
 - Remove **console=serial0,115200**
