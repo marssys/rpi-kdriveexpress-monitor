@@ -1,9 +1,11 @@
 # rpi-kdriveexpress-monitor
 ## Hardware
-- Raspberry Pi 2 Model B
+- Raspberry Pi 3 Model B / Raspberry Pi 2 Model B
 - Weinzierl KNX BAOS Module 838 kBerry  
 ![hardware](https://github.com/marssys/rpi-kdriveexpress-monitor/raw/master/images/hardware.jpg)
-## Prepare Raspberry Pi 2 (Raspbian Stretch Lite)
+## Prepare Raspberry Pi 3 Model B (Raspberry Pi OS Lite)
+- todo
+## Prepare Raspberry Pi 2 Model B (Raspbian Stretch Lite)
 - `sudo nano /boot/cmdline.txt`
 - Remove **console=serial0,115200**
 - `sudo reboot`
